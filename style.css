@@ -1,0 +1,134 @@
+/* Style.css */
+
+/* ------------------------------------- */
+/* 1. تنسيق التسميات (Labels) من مكان واحد */
+/* ------------------------------------- */
+label {
+    /* تحديد نوع وحجم الخط للتسميات (المتطلب) */
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: block; /* لجعل التسمية تأخذ سطراً كاملاً */
+    margin-bottom: 5px;
+    color: #004a7a; /* لون موحد للتسميات */
+}
+
+/* ------------------------------------- */
+/* 2. تنسيق عناصر الإدخال النصية من مكان واحد */
+/* ------------------------------------- */
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* تحديد الإطار واللون الموحد لعناصر الإدخال (المتطلب) */
+    border: 1px solid #007bff; /* إطار أزرق موحد */
+    background-color: #f0f8ff; /* لون خلفية موحد فاتح */
+    box-sizing: border-box; 
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ------------------------------------- */
+/* 3. التنسيق العام والـ Navigation */
+/* ------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    direction: rtl; /* اتجاه الصفحة من اليمين لليسار */
+    text-align: right;
+}
+
+header {
+    background-color: #004a7a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+nav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #007bff;
+}
+
+.content {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* تنسيق الجداول في صفحة التطبيقات */
+#appsTable {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#appsTable th, #appsTable td {
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* تنسيق الصف المخفي لتفاصيل التطبيق */
+.detail-row {
+    background-color: #e6f7ff;
+    font-size: 14px;
+}
+
+.details-content {
+    text-align: right;
+    padding: 15px;
+}
+
+/* تنسيق الأزرار (لتطبيق موحد) */
+button, input[type="submit"], input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* تنسيق رسائل الأخطاء (لإظهارها بالجافاسكريبت) */
+.error-message {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: none; 
+}

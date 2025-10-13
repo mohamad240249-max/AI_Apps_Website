@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إضافة تطبيق جديد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>موقع للتعريف بتطبيقات الذكاء الاصطناعي</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Apps.html">التطبيقات</a>
+        <a href="Add_App.html">إضافة تطبيق</a>
+    </nav>
+    
+    <div class="content">
+        <h2>إدخال معلومات تطبيق ذكاء اصطناعي جديد</h2>
+        
+        <form id="addAppForm" onsubmit="return validateAndSubmit(event);"> 
+            
+            <label for="appName">1. اسم التطبيق:</label>
+            <input type="text" id="appName" name="appName" placeholder="أحرف إنجليزية فقط وبدون فراغات (مثل: Gemini)" required>
+            <p id="appNameError" class="error-message">❌ الرجاء إدخال أحرف إنجليزية فقط وبدون فراغات.</p>
+
+            <label for="companyName">2. الشركة المصنعة:</label>
+            <input type="text" id="companyName" name="companyName" placeholder="أحرف إنجليزية مع أرقام (مثل: GoogleAI2024)" required>
+            <p id="companyNameError" class="error-message">❌ الرجاء إدخال أحرف إنجليزية وأرقام فقط.</p>
+
+            <label for="appURL">3. الموقع الإلكتروني (URL):</label>
+            <input type="url" id="appURL" name="appURL" placeholder="http://www.example.com" required>
+            <p id="appURLError" class="error-message">❌ الرجاء إدخال رابط صحيح.</p>
+
+            <label style="margin-top: 10px;">4. مجاني أم لا:</label>
+            <div style="margin-bottom: 20px;">
+                <input type="radio" id="isFreeYes" name="isFree" value="مجاني" required>
+                <label for="isFreeYes" style="display:inline; font-weight: normal; margin-left: 5px;">مجاني</label>
+                <input type="radio" id="isFreeNo" name="isFree" value="غير مجاني" style="margin-right: 20px;">
+                <label for="isFreeNo" style="display:inline; font-weight: normal; margin-left: 5px;">غير مجاني</label>
+            </div>
+
+            <label for="category">5. مجال الاستخدام (قائمة محددة مسبقاً):</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>-- اختر المجال --</option>
+                <option value="Robotics">Robotics</option>
+                <option value="Education">Education</option>
+                <option value="E-Commerce">E-Commerce</option>
+                <option value="HealthCare">HealthCare</option>
+                <option value="Finance">Finance</option>
+                <option value="Other">Other</option>
+            </select>
+            <p id="categoryError" class="error-message"></p>
+
+            <label for="shortDescription">6. شرح مختصر عن التطبيق:</label>
+            <textarea id="shortDescription" name="shortDescription" required placeholder="وصف موجز لا يقل عن 20 كلمة."></textarea>
+            <p id="descriptionError" class="error-message"></p>
+
+            <input type="submit" value="إرسال" title="يتم التحقق ونقل البيانات لصفحة التطبيقات">
+            <input type="reset" value="إعادة" title="يعيد الحقول إلى قيمها الافتراضية">
+            
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="myFunctions.js"></script>
+</body>
+</html>
